@@ -18,9 +18,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.exyte.animatednavbar.AnimatedNavigationBar
 import com.exyte.animatednavbar.animation.indendshape.shapeCornerRadius
 import com.samuelconra.lasalleapp.models.BottomNavigationItem
@@ -85,8 +87,16 @@ class MainActivity : ComponentActivity() {
                         composable(Screens.Calendar.route){
                             CalendarScreen(innerPadding)
                         }
-                        composable(Screens.NewsDetail.route){
-                            NewsDetailScreen(innerPadding)
+                        composable(
+                            route = Screens.NewsDetail.route + "/{newsId}",
+                            arguments = listOf(
+                                navArgument("newsId") {
+                                    type = NavType.IntType
+                                }
+                            )
+                        ){
+                            val newsId = it.arguments?.getInt("newsId") ?: 0
+                            NewsDetailScreen(innerPadding, newsId)
                         }
 
                     }

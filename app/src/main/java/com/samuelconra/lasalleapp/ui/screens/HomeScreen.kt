@@ -22,6 +22,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.BlendMode.Companion.Screen
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -31,6 +32,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
 import com.samuelconra.lasalleapp.R
 import com.samuelconra.lasalleapp.ui.components.CardImage
@@ -134,7 +136,7 @@ fun HomeScreen(innerPadding: PaddingValues, navController: NavController) {
         ){
             Column(){
                 Text(
-                    text = stringResource(id = R.string.community),
+                    text = stringResource(id = R.string.news_text),
                     style = MaterialTheme.typography.titleLarge,
                 )
 
@@ -144,14 +146,15 @@ fun HomeScreen(innerPadding: PaddingValues, navController: NavController) {
                 ) {
                     items(newsList){ news ->
                         CardImage(news){
-                            Log.i("News", it.id.toString())
+                            navController.navigate(Screens.NewsDetail.route + "/${news.id}")
                         }
                     }
                 }
 
+                Spacer(modifier = Modifier.height(30.dp))
                 // Título de Comunidad
                 Text(
-                    text = stringResource(id = R.string.news_text),
+                    text = stringResource(id = R.string.community),
                     style = MaterialTheme.typography.titleLarge,
                 )
 
@@ -180,14 +183,15 @@ fun HomeScreen(innerPadding: PaddingValues, navController: NavController) {
         }
     }
 }
-//
-//@Preview (
-//    showSystemUi = true,
-//    showBackground = true
-//)
-//@Composable
-//fun HomeScreenPreview() {
-//    LaSalleAppTheme {
-//        HomeScreen(PaddingValues(0.dp))
-//    }
-//}
+
+@Preview (
+    showSystemUi = true,
+    showBackground = true
+)
+@Composable
+fun HomeScreenPreview() {
+    LaSalleAppTheme {
+        val navController = rememberNavController()
+        HomeScreen(PaddingValues(0.dp), navController)
+    }
+}
