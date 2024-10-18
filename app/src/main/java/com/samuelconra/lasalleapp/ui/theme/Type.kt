@@ -37,72 +37,77 @@ val Typography = Typography(
 )
 
 val poppinsFontFamily = FontFamily(
-    Font(R.font.poppins_regular),
-    Font(R.font.poppins_black),
-    Font(R.font.poppins_bold),
-    Font(R.font.poppins_light)
+    Font(R.font.poppins_regular, FontWeight.Normal), // 400
+    Font(R.font.poppins_medium, FontWeight.Medium), // 500
+    Font(R.font.poppins_semibold, FontWeight.SemiBold), // 600
+    Font(R.font.poppins_bold, FontWeight.Bold), // 700
+    Font(R.font.poppins_extrabold, FontWeight.ExtraBold), // 800
+    Font(R.font.poppins_black, FontWeight.Black), // 900
+    Font(R.font.poppins_thin, FontWeight.Thin), // 100
+    Font(R.font.poppins_extralight, FontWeight.ExtraLight), //200
+    Font(R.font.poppins_light, FontWeight.Light) // 300
 )
 
 val poppinsTypo = Typography(
     displayLarge = TextStyle(
-        fontWeight = FontWeight.W300,
+        fontWeight = FontWeight.Black,
         fontFamily = poppinsFontFamily,
         fontSize = 57.sp,
         lineHeight = 64.sp,
         letterSpacing = (-0.25).sp
     ),
     displayMedium = TextStyle(
-        fontWeight = FontWeight.W300,
+        fontWeight = FontWeight.ExtraBold,
         fontFamily = poppinsFontFamily,
         fontSize = 45.sp,
         lineHeight = 52.sp
     ),
     displaySmall = TextStyle(
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.Bold,
         fontFamily = poppinsFontFamily,
         fontSize = 36.sp,
         lineHeight = 44.sp
     ),
     headlineLarge = TextStyle(
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.ExtraBold,
         fontFamily = poppinsFontFamily,
         fontSize = 32.sp,
         lineHeight = 40.sp
     ),
     headlineMedium = TextStyle(
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.Bold,
         fontFamily = poppinsFontFamily,
         fontSize = 28.sp,
         lineHeight = 36.sp
     ),
     headlineSmall = TextStyle(
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.SemiBold,
         fontFamily = poppinsFontFamily,
         fontSize = 24.sp,
         lineHeight = 32.sp
     ),
     titleLarge = TextStyle(
-        fontWeight = FontWeight.W900,
+        fontWeight = FontWeight.Bold,
         fontFamily = poppinsFontFamily,
         fontSize = 26.sp,
         lineHeight = 28.sp
     ),
     titleMedium = TextStyle(
-        fontWeight = FontWeight.W700,
+        fontWeight = FontWeight.SemiBold,
         fontFamily = poppinsFontFamily,
-        fontSize = 16.sp,
+        fontSize = 22.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.15.sp
     ),
     titleSmall = TextStyle(
-        fontWeight = FontWeight.W700,
+        fontWeight = FontWeight.Medium,
         fontFamily = poppinsFontFamily,
-        fontSize = 14.sp,
+        fontSize = 16.sp,
         lineHeight = 20.sp,
         letterSpacing = 0.1.sp
     ),
     bodyLarge = TextStyle(
-        fontWeight = FontWeight.Normal,
+        fontWeight = FontWeight.Medium,
         fontFamily = poppinsFontFamily,
         fontSize = 16.sp,
         lineHeight = 24.sp
@@ -120,21 +125,21 @@ val poppinsTypo = Typography(
         lineHeight = 16.sp
     ),
     labelLarge = TextStyle(
-        fontWeight = FontWeight.W700,
+        fontWeight = FontWeight.Light,
         fontFamily = poppinsFontFamily,
-        fontSize = 14.sp,
+        fontSize = 18.sp,
         lineHeight = 20.sp,
         letterSpacing = 0.1.sp
     ),
     labelMedium = TextStyle(
-        fontWeight = FontWeight.W700,
+        fontWeight = FontWeight.ExtraLight,
         fontFamily = poppinsFontFamily,
         fontSize = 12.sp,
         lineHeight = 16.sp,
         letterSpacing = 0.5.sp
     ),
     labelSmall = TextStyle(
-        fontWeight = FontWeight.W700,
+        fontWeight = FontWeight.Thin,
         fontFamily = poppinsFontFamily,
         fontSize = 11.sp,
         lineHeight = 16.sp

@@ -85,13 +85,12 @@ fun HomeScreen(innerPadding: PaddingValues, navController: NavController) {
                     Text(
                         text = stringResource(id = R.string.welcome_text),
                         color = MaterialTheme.colorScheme.onPrimary,
-                        fontSize = 18.sp
+                        style = MaterialTheme.typography.titleSmall,
                     )
                     Text(
                         text = "Samuel Conde",
                         color = MaterialTheme.colorScheme.onPrimary,
-                        fontSize = 22.sp,
-                        fontWeight = FontWeight.W900,
+                        style = MaterialTheme.typography.titleMedium,
                     )
                 }
 
@@ -100,7 +99,7 @@ fun HomeScreen(innerPadding: PaddingValues, navController: NavController) {
                     imageVector = Logout,
                     contentDescription = "Logout",
                     modifier = Modifier.size(30.dp),
-                    tint = MaterialTheme.colorScheme.onSecondary
+                    tint = MaterialTheme.colorScheme.onPrimary
                 )
             }
 
@@ -137,7 +136,7 @@ fun HomeScreen(innerPadding: PaddingValues, navController: NavController) {
             Column(){
                 Text(
                     text = stringResource(id = R.string.news_text),
-                    style = MaterialTheme.typography.titleLarge,
+                    style = MaterialTheme.typography.headlineSmall,
                 )
 
                 // Carrusel
@@ -155,7 +154,7 @@ fun HomeScreen(innerPadding: PaddingValues, navController: NavController) {
                 // Título de Comunidad
                 Text(
                     text = stringResource(id = R.string.community),
-                    style = MaterialTheme.typography.titleLarge,
+                    style = MaterialTheme.typography.headlineSmall,
                 )
 
                 // Grid de Comunidad
