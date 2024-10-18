@@ -9,13 +9,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.samuelconra.lasalleapp.R
 import com.samuelconra.lasalleapp.ui.theme.poppinsFontFamily
 import com.samuelconra.lasalleapp.utils.Logout
+import com.samuelconra.lasalleapp.utils.student
 
 @Composable
 fun SettingsScreen(innerPadding: PaddingValues) {
@@ -55,12 +58,12 @@ fun SettingsScreen(innerPadding: PaddingValues) {
             horizontalAlignment = Alignment.CenterHorizontally,
         ){
             Text(
-                text = "Samuel Conde",
+                text = "${student.name} ${student.firstSurname}",
                 style = MaterialTheme.typography.headlineMedium,
                 color = MaterialTheme.colorScheme.onSecondary,
             )
             Text(
-                text = "scr77164@lasallebajio.edu.mx",
+                text = student.email,
                 style = MaterialTheme.typography.labelLarge,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -76,7 +79,7 @@ fun SettingsScreen(innerPadding: PaddingValues) {
                 .padding(20.dp)
         ){
             Text(
-                text = "Datos Generales",
+                text = stringResource(id = R.string.general_data),
                 style = MaterialTheme.typography.titleSmall,
                 fontSize = 18.sp
             )
@@ -84,39 +87,39 @@ fun SettingsScreen(innerPadding: PaddingValues) {
 
             Row{
                 Text(
-                    text = "Nombre:",
+                    text = stringResource(id = R.string.name_text),
                     style = MaterialTheme.typography.labelLarge,
                     fontSize = 16.sp
                 )
                 Spacer(modifier = Modifier.width(6.dp))
                 Text(
-                    text = "Samuel Conde Rangel",
+                    text = student.fullName,
                     style = MaterialTheme.typography.labelMedium,
                     fontSize = 16.sp
                 )
             }
             Row{
                 Text(
-                    text = "Fecha de Nacimiento:",
+                    text = stringResource(id = R.string.birth_text),
                     style = MaterialTheme.typography.labelLarge,
                     fontSize = 16.sp
                 )
                 Spacer(modifier = Modifier.width(6.dp))
                 Text(
-                    text = "14-10-2004",
+                    text = student.birth,
                     style = MaterialTheme.typography.labelMedium,
                     fontSize = 16.sp
                 )
             }
             Row{
                 Text(
-                    text = "Matrícula",
+                    text = stringResource(id = R.string.enrollment_text),
                     style = MaterialTheme.typography.labelLarge,
                     fontSize = 16.sp
                 )
                 Spacer(modifier = Modifier.width(6.dp))
                 Text(
-                    text = "77164",
+                    text = student.enrollment.toString(),
                     style = MaterialTheme.typography.labelMedium,
                     fontSize = 16.sp
                 )
@@ -140,7 +143,7 @@ fun SettingsScreen(innerPadding: PaddingValues) {
                 )
             ) {
                 Text(
-                    text = "Cambiar Contraseña",
+                    text = stringResource(id = R.string.change_passwd_text),
                     style = MaterialTheme.typography.titleSmall,
                     fontSize = 18.sp,
                     color = MaterialTheme.colorScheme.onPrimary,
@@ -160,7 +163,7 @@ fun SettingsScreen(innerPadding: PaddingValues) {
                 )
             ) {
                 Text(
-                    text = "Cambiar Tema",
+                    text = stringResource(id = R.string.change_theme_text),
                     style = MaterialTheme.typography.titleSmall,
                     fontSize = 18.sp,
                     color = MaterialTheme.colorScheme.onPrimary,

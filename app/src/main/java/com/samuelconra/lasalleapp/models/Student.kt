@@ -4,6 +4,7 @@ data class Student(
     val name: String,
     val firstSurname: String,
     val secondSurname: String,
+    val birth: String,
     val email: String,
     val career: String,
     val semester: Int,
@@ -16,4 +17,7 @@ data class Student(
         } else {
             0.0
         }
+
+    val fullName: String
+        get() = "$name $firstSurname $secondSurname"
 }

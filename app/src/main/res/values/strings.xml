@@ -3,4 +3,10 @@
     <string name="welcome_text">Bienvenido</string>
     <string name="news_text">Noticias</string>
     <string name="community">Comunidad</string>
+    <string name="general_data">Datos Generales:</string>
+    <string name="name_text">Nombre:</string>
+    <string name="enrollment_text">Matrícula:</string>
+    <string name="birth_text">Fecha de Nacimiento:</string>
+    <string name="change_passwd_text">Cambiar Contraseña</string>
+    <string name="change_theme_text">Cambiar Tema</string>
 </resources>

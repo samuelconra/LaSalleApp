@@ -88,7 +88,7 @@ fun HomeScreen(innerPadding: PaddingValues, navController: NavController) {
                         style = MaterialTheme.typography.titleSmall,
                     )
                     Text(
-                        text = "Samuel Conde",
+                        text = "${student.name} ${student.firstSurname}",
                         color = MaterialTheme.colorScheme.onPrimary,
                         style = MaterialTheme.typography.titleMedium,
                     )

@@ -42,6 +42,7 @@ val student = Student(
     name = "Samuel",
     firstSurname = "Conde",
     secondSurname = "Rangel",
+    birth = "14-10-2004",
     email = "scr77164@lasallebajio.edu.mx",
     career = "Ingeniería en Software y Sistemas Computacionales",
     semester = 5,
