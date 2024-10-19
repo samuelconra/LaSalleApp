@@ -18,15 +18,17 @@ import androidx.navigation.NavController
 import com.samuelconra.lasalleapp.R
 import com.samuelconra.lasalleapp.ui.theme.poppinsFontFamily
 import com.samuelconra.lasalleapp.utils.Logout
+import com.samuelconra.lasalleapp.utils.Screens
 import com.samuelconra.lasalleapp.utils.student
 
 @Composable
-fun SettingsScreen(innerPadding: PaddingValues) {
+fun SettingsScreen(innerPadding: PaddingValues, navController: NavController) {
     Column(
         modifier = Modifier
             .background(MaterialTheme.colorScheme.background)
             .padding(innerPadding)
-            .padding(horizontal = 30.dp),
+            .padding(horizontal = 30.dp)
+            .padding(top = 30.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ){
         // Logout Icon
@@ -131,7 +133,7 @@ fun SettingsScreen(innerPadding: PaddingValues) {
         Column(horizontalAlignment = Alignment.CenterHorizontally,) {
 
             ElevatedButton(
-                onClick = { },
+                onClick = { navController.navigate(Screens.ChangePassword.route) },
                 colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.surface),
                 modifier = Modifier
                     .height(50.dp)
@@ -151,7 +153,7 @@ fun SettingsScreen(innerPadding: PaddingValues) {
             }
             Spacer(modifier = Modifier.height(20.dp))
             ElevatedButton(
-                onClick = { },
+                onClick = { navController.navigate(Screens.ChangeTheme.route) },
                 colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.onSurface),
                 modifier = Modifier
                     .height(50.dp)

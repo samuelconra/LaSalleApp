@@ -82,7 +82,7 @@ class MainActivity : ComponentActivity() {
                             GradesScreen(innerPadding)
                         }
                         composable(Screens.Settings.route){
-                            SettingsScreen(innerPadding)
+                            SettingsScreen(innerPadding, navController)
                         }
                         composable(Screens.Calendar.route){
                             CalendarScreen(innerPadding)
@@ -99,6 +99,12 @@ class MainActivity : ComponentActivity() {
                             NewsDetailScreen(innerPadding, newsId)
                         }
 
+                        composable(Screens.ChangePassword.route){
+                            ChangePasswdScreen(innerPadding)
+                        }
+                        composable(Screens.ChangeTheme.route){
+                            ChangeThemeScreen(innerPadding)
+                        }
                     }
                 }
             }
