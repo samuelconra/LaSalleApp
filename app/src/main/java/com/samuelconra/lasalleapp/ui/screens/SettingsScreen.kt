@@ -67,7 +67,7 @@ fun SettingsScreen(innerPadding: PaddingValues, navController: NavController) {
             Text(
                 text = student.email,
                 style = MaterialTheme.typography.labelLarge,
-                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                color = MaterialTheme.colorScheme.onPrimaryContainer,
             )
         }
         Spacer(modifier = Modifier.height(40.dp))

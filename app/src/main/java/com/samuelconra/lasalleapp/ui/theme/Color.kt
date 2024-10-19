@@ -26,4 +26,7 @@ val DarkerRed = Color(0xFF8e1e31)
 val DollBlue = Color(0xFF63759d)
 val TextBlue = Color(0xFF3b5385)
 
+val GreenState = Color(0xFF007e13)
+val YellowState = Color(0xFFd1a700)
+
 val LightBlack = Color(0x60000000)

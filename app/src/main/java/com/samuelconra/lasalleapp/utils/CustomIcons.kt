@@ -912,3 +912,142 @@ public val Eye_tracking: ImageVector
     }
 
 private var _Eye_tracking: ImageVector? = null
+
+
+public val Close: ImageVector
+    get() {
+        if (_Close != null) {
+            return _Close!!
+        }
+        _Close = ImageVector.Builder(
+            name = "Close",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 960f,
+            viewportHeight = 960f
+        ).apply {
+            path(
+                fill = SolidColor(Color.Black),
+                fillAlpha = 1.0f,
+                stroke = null,
+                strokeAlpha = 1.0f,
+                strokeLineWidth = 1.0f,
+                strokeLineCap = StrokeCap.Butt,
+                strokeLineJoin = StrokeJoin.Miter,
+                strokeLineMiter = 1.0f,
+                pathFillType = PathFillType.NonZero
+            ) {
+                moveTo(256f, 760f)
+                lineToRelative(-56f, -56f)
+                lineToRelative(224f, -224f)
+                lineToRelative(-224f, -224f)
+                lineToRelative(56f, -56f)
+                lineToRelative(224f, 224f)
+                lineToRelative(224f, -224f)
+                lineToRelative(56f, 56f)
+                lineToRelative(-224f, 224f)
+                lineToRelative(224f, 224f)
+                lineToRelative(-56f, 56f)
+                lineToRelative(-224f, -224f)
+                close()
+            }
+        }.build()
+        return _Close!!
+    }
+
+private var _Close: ImageVector? = null
+
+
+public val Check: ImageVector
+    get() {
+        if (_Check != null) {
+            return _Check!!
+        }
+        _Check = ImageVector.Builder(
+            name = "Check",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 960f,
+            viewportHeight = 960f
+        ).apply {
+            path(
+                fill = SolidColor(Color.Black),
+                fillAlpha = 1.0f,
+                stroke = null,
+                strokeAlpha = 1.0f,
+                strokeLineWidth = 1.0f,
+                strokeLineCap = StrokeCap.Butt,
+                strokeLineJoin = StrokeJoin.Miter,
+                strokeLineMiter = 1.0f,
+                pathFillType = PathFillType.NonZero
+            ) {
+                moveTo(382f, 720f)
+                lineTo(154f, 492f)
+                lineToRelative(57f, -57f)
+                lineToRelative(171f, 171f)
+                lineToRelative(367f, -367f)
+                lineToRelative(57f, 57f)
+                close()
+            }
+        }.build()
+        return _Check!!
+    }
+
+private var _Check: ImageVector? = null
+
+
+public val ExclamationCircle: ImageVector
+    get() {
+        if (_ExclamationCircle != null) {
+            return _ExclamationCircle!!
+        }
+        _ExclamationCircle = ImageVector.Builder(
+            name = "ExclamationCircle",
+            defaultWidth = 16.dp,
+            defaultHeight = 16.dp,
+            viewportWidth = 16f,
+            viewportHeight = 16f
+        ).apply {
+            path(
+                fill = SolidColor(Color(0xFF000000)),
+                fillAlpha = 1.0f,
+                stroke = null,
+                strokeAlpha = 1.0f,
+                strokeLineWidth = 1.0f,
+                strokeLineCap = StrokeCap.Butt,
+                strokeLineJoin = StrokeJoin.Miter,
+                strokeLineMiter = 1.0f,
+                pathFillType = PathFillType.NonZero
+            ) {
+                moveTo(8f, 15f)
+                arcTo(7f, 7f, 0f, isMoreThanHalf = true, isPositiveArc = true, 8f, 1f)
+                arcToRelative(7f, 7f, 0f, isMoreThanHalf = false, isPositiveArc = true, 0f, 14f)
+                moveToRelative(0f, 1f)
+                arcTo(8f, 8f, 0f, isMoreThanHalf = true, isPositiveArc = false, 8f, 0f)
+                arcToRelative(8f, 8f, 0f, isMoreThanHalf = false, isPositiveArc = false, 0f, 16f)
+            }
+            path(
+                fill = SolidColor(Color(0xFF000000)),
+                fillAlpha = 1.0f,
+                stroke = null,
+                strokeAlpha = 1.0f,
+                strokeLineWidth = 1.0f,
+                strokeLineCap = StrokeCap.Butt,
+                strokeLineJoin = StrokeJoin.Miter,
+                strokeLineMiter = 1.0f,
+                pathFillType = PathFillType.NonZero
+            ) {
+                moveTo(7.002f, 11f)
+                arcToRelative(1f, 1f, 0f, isMoreThanHalf = true, isPositiveArc = true, 2f, 0f)
+                arcToRelative(1f, 1f, 0f, isMoreThanHalf = false, isPositiveArc = true, -2f, 0f)
+                moveTo(7.1f, 4.995f)
+                arcToRelative(0.905f, 0.905f, 0f, isMoreThanHalf = true, isPositiveArc = true, 1.8f, 0f)
+                lineToRelative(-0.35f, 3.507f)
+                arcToRelative(0.552f, 0.552f, 0f, isMoreThanHalf = false, isPositiveArc = true, -1.1f, 0f)
+                close()
+            }
+        }.build()
+        return _ExclamationCircle!!
+    }
+
+private var _ExclamationCircle: ImageVector? = null

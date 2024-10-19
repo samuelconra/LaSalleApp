@@ -116,6 +116,9 @@ class MainActivity : ComponentActivity() {
                             val studentSubjectID = it.arguments?.getInt("studentSubjectId") ?: 0
                             GradesDetailScreen(innerPadding, studentSubjectID)
                         }
+                        composable(Screens.Payments.route){
+                            PaymentsScreen(innerPadding)
+                        }
                     }
                 }
             }

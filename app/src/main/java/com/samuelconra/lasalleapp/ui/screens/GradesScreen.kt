@@ -13,10 +13,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.BlendMode.Companion.Screen
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.samuelconra.lasalleapp.R
 import com.samuelconra.lasalleapp.ui.components.InfoSubject
 import com.samuelconra.lasalleapp.utils.Screens
 import com.samuelconra.lasalleapp.utils.student
@@ -33,7 +35,7 @@ fun GradesScreen(innerPadding: PaddingValues, navController: NavController) {
     ){
         // Título Página
         Text(
-            text = "Calificaciones",
+            text = stringResource(id = R.string.grades_text),
             style = MaterialTheme.typography.headlineMedium,
             fontSize = 32.sp,
             color = MaterialTheme.colorScheme.onSecondary,
@@ -81,7 +83,7 @@ fun GradesScreen(innerPadding: PaddingValues, navController: NavController) {
                     textAlign = TextAlign.Center,
                 )
                 Text(
-                    text = "Aprobadas",
+                    text = stringResource(id = R.string.passed_text),
                     style = MaterialTheme.typography.titleMedium,
                     color = MaterialTheme.colorScheme.onTertiaryContainer,
                     fontSize = 14.sp,
@@ -105,7 +107,7 @@ fun GradesScreen(innerPadding: PaddingValues, navController: NavController) {
                     textAlign = TextAlign.Center,
                 )
                 Text(
-                    text = "Reprobadas",
+                    text = stringResource(id = R.string.failed_text),
                     style = MaterialTheme.typography.titleMedium,
                     color = MaterialTheme.colorScheme.onTertiary,
                     fontSize = 14.sp,
@@ -129,7 +131,7 @@ fun GradesScreen(innerPadding: PaddingValues, navController: NavController) {
                     textAlign = TextAlign.Center,
                 )
                 Text(
-                    text = "Promedio",
+                    text = stringResource(id = R.string.average_text),
                     style = MaterialTheme.typography.titleMedium,
                     color = MaterialTheme.colorScheme.onTertiary,
                     fontSize = 14.sp,
@@ -142,7 +144,7 @@ fun GradesScreen(innerPadding: PaddingValues, navController: NavController) {
 
         // Lista Materias
         Text(
-            text = "Materias",
+            text = stringResource(id = R.string.subjects_text),
             style = MaterialTheme.typography.titleSmall,
             fontSize = 22.sp,
             color = MaterialTheme.colorScheme.onSecondary,

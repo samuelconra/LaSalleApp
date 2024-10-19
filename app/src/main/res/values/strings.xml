@@ -9,4 +9,12 @@
     <string name="birth_text">Fecha de Nacimiento:</string>
     <string name="change_passwd_text">Cambiar Contraseña</string>
     <string name="change_theme_text">Cambiar Tema</string>
+    <string name="grades_text">Calificaciones</string>
+    <string name="passed_text">Aprobadas</string>
+    <string name="failed_text">Reprobadas</string>
+    <string name="average_text">Promedio</string>
+    <string name="subjects_text">Materias</string>
+    <string name="payments_text">Pagos</string>
+    <string name="payments_due_text">Pagos Pendientes</string>
+    <string name="payments_made_text">Pagos Realizados</string>
 </resources>

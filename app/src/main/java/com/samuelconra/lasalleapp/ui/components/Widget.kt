@@ -1,6 +1,7 @@
 package com.samuelconra.lasalleapp.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -19,12 +20,13 @@ import androidx.compose.ui.unit.dp
 import com.samuelconra.lasalleapp.ui.theme.LaSalleAppTheme
 
 @Composable
-fun Widget(icon: ImageVector, title: String) {
+fun Widget(icon: ImageVector, title: String, onClick: () -> Unit) {
     Box(
         modifier = Modifier
             .clip(RoundedCornerShape(10.dp))
             .size(90.dp)
-            .background(MaterialTheme.colorScheme.background),
+            .background(MaterialTheme.colorScheme.background)
+            .clickable(onClick = onClick),
         contentAlignment = Alignment.Center
     ){
         Column(
@@ -42,13 +44,5 @@ fun Widget(icon: ImageVector, title: String) {
                 style = MaterialTheme.typography.bodySmall
             )
         }
-    }
-}
-
-@Composable
-@Preview
-fun PreviewWidget(){
-    LaSalleAppTheme {
-        Widget(Icons.Default.Home, "Sin eventos")
     }
 }
