@@ -11,7 +11,8 @@ data class Student(
     val career: String,
     val semester: Int,
     val enrollment: Int,
-    val subjects: List<StudentSubject>
+    val subjects: List<StudentSubject>,
+    val payments: List<Payment>
 ) {
     val average: Double
         get() = if (subjects.isNotEmpty()) {

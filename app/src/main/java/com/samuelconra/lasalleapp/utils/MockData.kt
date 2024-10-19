@@ -56,5 +56,19 @@ val student = Student(
         StudentSubject(6, subjects[5], 9.7, 8.3, 7.0),
         StudentSubject(7, subjects[6], 4.3, 6.6, 5.5),
         StudentSubject(8, subjects[7], 7.7, 9.8, 9.8),
+    ),
+    payments = listOf(
+        Payment(1, period = "Enero", dueDate = "15-01-2024", status = PaymentStatus.PAID),
+        Payment(2, period = "Febrero", dueDate = "15-02-2024", status = PaymentStatus.PAID),
+        Payment(3, period = "Marzo", dueDate = "15-03-2024", status = PaymentStatus.PAID),
+        Payment(4, period = "Abril", dueDate = "15-04-2024", status = PaymentStatus.PAID),
+        Payment(5, period = "Mayo", dueDate = "15-05-2024", status = PaymentStatus.PAID),
+        Payment(6, period = "Junio", dueDate = "15-06-2024", status = PaymentStatus.PAID),
+        Payment(7, period = "Julio", dueDate = "15-07-2024", status = PaymentStatus.PAID),
+        Payment(8, period = "Agosto", dueDate = "15-08-2024", status = PaymentStatus.PAID),
+        Payment(9, period = "Septiembre", dueDate = "15-09-2024", status = PaymentStatus.PAID),
+        Payment(10, period = "Octubre", dueDate = "15-10-2024", status = PaymentStatus.OVERDUE),
+        Payment(11, period = "Noviembre", dueDate = "15-11-2024", status = PaymentStatus.PENDING),
+        Payment(12, period = "Diciembre", dueDate = "15-12-2024", status = PaymentStatus.PENDING),
     )
 )

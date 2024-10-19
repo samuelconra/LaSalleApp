@@ -17,4 +17,6 @@
     <string name="payments_text">Pagos</string>
     <string name="payments_due_text">Pagos Pendientes</string>
     <string name="payments_made_text">Pagos Realizados</string>
+    <string name="period_text">Periodo</string>
+    <string name="dueDate_text">Vencimiento</string>
 </resources>

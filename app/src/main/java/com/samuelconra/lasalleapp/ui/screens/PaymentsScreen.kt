@@ -2,6 +2,8 @@ package com.samuelconra.lasalleapp.ui.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -17,10 +19,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.samuelconra.lasalleapp.R
+import com.samuelconra.lasalleapp.models.BottomNavigationItem.Companion.items
+import com.samuelconra.lasalleapp.models.PaymentStatus
 import com.samuelconra.lasalleapp.ui.components.PaymentCard
 import com.samuelconra.lasalleapp.utils.Check
 import com.samuelconra.lasalleapp.utils.Close
 import com.samuelconra.lasalleapp.utils.ExclamationCircle
+import com.samuelconra.lasalleapp.utils.student
 
 @Composable
 fun PaymentsScreen(innerPadding: PaddingValues) {
@@ -54,12 +59,13 @@ fun PaymentsScreen(innerPadding: PaddingValues) {
         )
         Spacer(modifier = Modifier.height(20.dp))
 
-        PaymentCard(MaterialTheme.colorScheme.onSurfaceVariant, Close)
-        Spacer(modifier = Modifier.height(10.dp))
-        PaymentCard(MaterialTheme.colorScheme.surface, ExclamationCircle)
-        Spacer(modifier = Modifier.height(10.dp))
-        PaymentCard(MaterialTheme.colorScheme.surface, ExclamationCircle)
-        Spacer(modifier = Modifier.height(30.dp))
+        student.payments.forEach { payment ->
+            if (payment.status != PaymentStatus.PAID) {
+                PaymentCard(payment)
+                Spacer(modifier = Modifier.height(10.dp))
+            }
+        }
+        Spacer(modifier = Modifier.height(20.dp))
 
         // Pagos Realizados
         Text(
@@ -71,17 +77,11 @@ fun PaymentsScreen(innerPadding: PaddingValues) {
         )
         Spacer(modifier = Modifier.height(20.dp))
 
-        PaymentCard(MaterialTheme.colorScheme.surfaceVariant, Check)
-        Spacer(modifier = Modifier.height(10.dp))
-        PaymentCard(MaterialTheme.colorScheme.surfaceVariant, Check)
-        Spacer(modifier = Modifier.height(10.dp))
-        PaymentCard(MaterialTheme.colorScheme.surfaceVariant, Check)
-        Spacer(modifier = Modifier.height(10.dp))
-        PaymentCard(MaterialTheme.colorScheme.surfaceVariant, Check)
-        Spacer(modifier = Modifier.height(10.dp))
-        PaymentCard(MaterialTheme.colorScheme.surfaceVariant, Check)
-        Spacer(modifier = Modifier.height(10.dp))
-        PaymentCard(MaterialTheme.colorScheme.surfaceVariant, Check)
-        Spacer(modifier = Modifier.height(10.dp))
+        student.payments.forEach { payment ->
+            if (payment.status == PaymentStatus.PAID) {
+                PaymentCard(payment)
+                Spacer(modifier = Modifier.height(10.dp))
+            }
+        }
     }
 }
