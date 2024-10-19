@@ -22,8 +22,11 @@ private val DarkColorScheme = darkColorScheme(
 
     surface = RedSalle,
     onSurface = DarkerRed,
-    tertiary = DollBlue,
-    onTertiary = GrayElement,
+    tertiary = GrayContainer,
+    onTertiary = TextGrayContainer,
+    tertiaryContainer = DollBlue,
+    onTertiaryContainer = TextBlue,
+
     onSurfaceVariant = LightBlack
 )
 
@@ -37,8 +40,10 @@ private val LightColorScheme = lightColorScheme(
 
     surface = RedSalle,
     onSurface = DarkerRed,
-    tertiary = DollBlue,
-    onTertiary = GrayElement,
+    tertiary = GrayContainer,
+    onTertiary = TextGrayContainer,
+    tertiaryContainer = DollBlue,
+    onTertiaryContainer = TextBlue,
 
     onSurfaceVariant = LightBlack
 

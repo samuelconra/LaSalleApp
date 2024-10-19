@@ -19,9 +19,11 @@ val GrayDark = Color(0xFF4B4B4B)
 val BlueLight = Color(0xFF338FE9)
 
 val GrayLight = Color(0xFFF4F5F7)
-val GrayElement = Color(0xFFe6e6e7)
+val GrayContainer = Color(0xFFe6e6e7)
+val TextGrayContainer = Color(0xFFcbcbcb)
 val RedSalle = Color(0xFFb5001f)
 val DarkerRed = Color(0xFF8e1e31)
 val DollBlue = Color(0xFF63759d)
+val TextBlue = Color(0xFF3b5385)
 
 val LightBlack = Color(0x60000000)

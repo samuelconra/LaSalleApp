@@ -29,14 +29,14 @@ val communities = listOf(
 )
 
 val subjects = listOf(
-    Subject(name = "Metodología de la Investigación", teacher = "Elder De La Rosa Cruz"),
-    Subject(name = "Conmutación de Redes", teacher = "Luis Felipe Vázquez Rodríguez"),
-    Subject(name = "Administración de Proyectos", teacher = "Iván Ayala Manrique"),
-    Subject(name = "Procesamiento de Imágenes", teacher = "Emmanuel Ovalle Magallanes"),
-    Subject(name = "Taller de Desarrollo Móvil", teacher = "Teach"),
-    Subject(name = "Modelos Abstractos", teacher = "Pedro León Cruz Parada"),
-    Subject(name = "Administración de Base de Datos", teacher = "Luis Enrique Cuellar Vivia"),
-    Subject(name = "Mundo desde Perspectiva Cristiana", teacher = "Daniel García Chavarín")
+    Subject(name = "Metodología de la Investigación", teacher = "Elder De La Rosa Cruz", icon = Lab_research),
+    Subject(name = "Conmutación de Redes", teacher = "Luis Felipe Vázquez Rodríguez", icon = Ethernet),
+    Subject(name = "Administración de Proyectos", teacher = "Iván Ayala Manrique", icon = Book_4),
+    Subject(name = "Procesamiento de Imágenes", teacher = "Emmanuel Ovalle Magallanes", icon = Images),
+    Subject(name = "Taller de Desarrollo Móvil", teacher = "Teach", icon = Android2),
+    Subject(name = "Modelos Abstractos", teacher = "Pedro León Cruz Parada", icon = Code),
+    Subject(name = "Administración de Base de Datos", teacher = "Luis Enrique Cuellar Vivia", icon = Database),
+    Subject(name = "Mundo desde Perspectiva Cristiana", teacher = "Daniel García Chavarín", icon = Eye_tracking)
 )
 val student = Student(
     name = "Samuel",
@@ -48,13 +48,13 @@ val student = Student(
     semester = 5,
     enrollment = 77164,
     subjects = listOf(
-        StudentSubject(subjects[0], 7.3, 6.8, 9.2),
-        StudentSubject(subjects[1], 8.9, 9.7, 10.0),
-        StudentSubject(subjects[2], 9.0, 10.0, 7.3),
-        StudentSubject(subjects[3], 8.9, 9.3, 9.0),
-        StudentSubject(subjects[4], 6.3, 8.8, 9.9),
-        StudentSubject(subjects[5], 9.7, 8.3, 7.0),
-        StudentSubject(subjects[6], 9.6, 9.6, 9.5),
-        StudentSubject(subjects[7], 7.7, 9.8, 9.8),
+        StudentSubject(1, subjects[0], 7.3, 10.0, 9.2),
+        StudentSubject(2, subjects[1], 6.1, 5.8, 5.4),
+        StudentSubject(3, subjects[2], 9.0, 10.0, 7.3),
+        StudentSubject(4, subjects[3], 8.9, 9.3, 9.0),
+        StudentSubject(5, subjects[4], 10.0, 8.8, 9.9),
+        StudentSubject(6, subjects[5], 9.7, 8.3, 7.0),
+        StudentSubject(7, subjects[6], 4.3, 6.6, 5.5),
+        StudentSubject(8, subjects[7], 7.7, 9.8, 9.8),
     )
 )

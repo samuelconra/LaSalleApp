@@ -79,7 +79,7 @@ class MainActivity : ComponentActivity() {
                             HomeScreen(innerPadding, navController)
                         }
                         composable(Screens.Grades.route){
-                            GradesScreen(innerPadding)
+                            GradesScreen(innerPadding, navController)
                         }
                         composable(Screens.Settings.route){
                             SettingsScreen(innerPadding, navController)
@@ -104,6 +104,17 @@ class MainActivity : ComponentActivity() {
                         }
                         composable(Screens.ChangeTheme.route){
                             ChangeThemeScreen(innerPadding)
+                        }
+                        composable(
+                            route = Screens.GradesDetail.route + "/{studentSubjectId}",
+                            arguments = listOf(
+                                navArgument("studentSubjectId") {
+                                    type = NavType.IntType
+                                }
+                            )
+                        ){
+                            val studentSubjectID = it.arguments?.getInt("studentSubjectId") ?: 0
+                            GradesDetailScreen(innerPadding, studentSubjectID)
                         }
                     }
                 }

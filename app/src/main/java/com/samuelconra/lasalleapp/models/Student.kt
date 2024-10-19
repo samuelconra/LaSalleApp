@@ -1,5 +1,7 @@
 package com.samuelconra.lasalleapp.models
 
+import kotlin.math.round
+
 data class Student(
     val name: String,
     val firstSurname: String,
@@ -13,10 +15,16 @@ data class Student(
 ) {
     val average: Double
         get() = if (subjects.isNotEmpty()) {
-            subjects.sumOf { it.average } / subjects.size
+            round((subjects.sumOf { it.average } / subjects.size) * 10) / 10
         } else {
             0.0
         }
+
+    val passedSubjects: Int
+        get() = subjects.count { it.average >= 6.0 }
+
+    val failedSubjects: Int
+        get() = subjects.count { it.average < 6.0 }
 
     val fullName: String
         get() = "$name $firstSurname $secondSurname"
