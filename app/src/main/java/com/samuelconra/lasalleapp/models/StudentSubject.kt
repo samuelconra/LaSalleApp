@@ -5,10 +5,8 @@ import kotlin.math.round
 data class StudentSubject(
     val id: Int,
     val subject: Subject,
-    val partial1: Double,
-    val partial2: Double,
-    val partial3: Double
+    val midterms: List<Midterm>,
 ) {
     val average: Double
-        get() = round(((partial1 + partial2 + partial3) / 3) * 10) / 10
+        get() = round(((midterms[0].grade * 0.2) + (midterms[1].grade * 0.2) + (midterms[2].grade * 0.6)) * 10) / 10
 }

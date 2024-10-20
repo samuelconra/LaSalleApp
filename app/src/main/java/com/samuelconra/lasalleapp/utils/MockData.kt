@@ -38,6 +38,7 @@ val subjects = listOf(
     Subject(name = "Administración de Base de Datos", teacher = "Luis Enrique Cuellar Vivia", icon = Database),
     Subject(name = "Mundo desde Perspectiva Cristiana", teacher = "Daniel García Chavarín", icon = Eye_tracking)
 )
+
 val student = Student(
     name = "Samuel",
     firstSurname = "Conde",
@@ -48,15 +49,80 @@ val student = Student(
     semester = 5,
     enrollment = 77164,
     subjects = listOf(
-        StudentSubject(1, subjects[0], 7.3, 10.0, 9.2),
-        StudentSubject(2, subjects[1], 6.1, 5.8, 5.4),
-        StudentSubject(3, subjects[2], 9.0, 10.0, 7.3),
-        StudentSubject(4, subjects[3], 8.9, 9.3, 9.0),
-        StudentSubject(5, subjects[4], 10.0, 8.8, 9.9),
-        StudentSubject(6, subjects[5], 9.7, 8.3, 7.0),
-        StudentSubject(7, subjects[6], 4.3, 6.6, 5.5),
-        StudentSubject(8, subjects[7], 7.7, 9.8, 9.8),
+        StudentSubject(
+            id = 1,
+            subject = subjects[0],
+            midterms = listOf(
+                Midterm(name = "Parcial 1", assignments = 9.9, activities = 9.3, project = 10.0, exam = 9.2),
+                Midterm(name = "Parcial 2", assignments = 8.5, activities = 8.5, project = 9.0, exam = 8.0),
+                Midterm(name = "Parcial 3", assignments = 9.1, activities = 9.2, project = 10.0, exam = 9.6)
+            )
+        ),
+        StudentSubject(
+            id = 2,
+            subject = subjects[1],
+            midterms = listOf(
+                Midterm(name = "Parcial 1", assignments = 7.5, activities = 8.0, project = 8.0, exam = 7.0),
+                Midterm(name = "Parcial 2", assignments = 8.0, activities = 8.5, project = 9.0, exam = 8.5),
+                Midterm(name = "Parcial 3", assignments = 9.0, activities = 9.5, project = 9.0, exam = 10.0)
+            )
+        ),
+        StudentSubject(
+            id = 3,
+            subject = subjects[2],
+            midterms = listOf(
+                Midterm(name = "Parcial 1", assignments = 6.1, activities = 6.9, project = 5.5, exam = 6.1),
+                Midterm(name = "Parcial 2", assignments = 6.5, activities = 7.4, project = 6.9, exam = 6.9),
+                Midterm(name = "Parcial 3", assignments = 7.9, activities = 8.3, project = 5.8, exam = 4.0)
+            )
+        ),
+        StudentSubject(
+            id = 4,
+            subject = subjects[3],
+            midterms = listOf(
+                Midterm(name = "Parcial 1", assignments = 9.5, activities = 9.0, project = 9.0, exam = 9.0),
+                Midterm(name = "Parcial 2", assignments = 9.0, activities = 9.0, project = 8.5, exam = 9.5),
+                Midterm(name = "Parcial 3", assignments = 10.0, activities = 10.0, project = 10.0, exam = 10.0)
+            )
+        ),
+        StudentSubject(
+            id = 5,
+            subject = subjects[4],
+            midterms = listOf(
+                Midterm(name = "Parcial 1", assignments = 10.0, activities = 10.0, project = 10.0, exam = 10.0),
+                Midterm(name = "Parcial 2", assignments = 10.0, activities = 10.0, project = 10.0, exam = 10.0),
+                Midterm(name = "Parcial 3", assignments = 10.0, activities = 10.0, project = 10.0, exam = 10.0)
+            )
+        ),
+        StudentSubject(
+            id = 6,
+            subject = subjects[5],
+            midterms = listOf(
+                Midterm(name = "Parcial 1", assignments = 8.2, activities = 6.5, project = 8.7, exam = 9.6),
+                Midterm(name = "Parcial 2", assignments = 8.8, activities = 7.2, project = 7.8, exam = 7.1),
+                Midterm(name = "Parcial 3", assignments = 8.4, activities = 9.9, project = 8.4, exam = 9.5)
+            )
+        ),
+        StudentSubject(
+            id = 7,
+            subject = subjects[6],
+            midterms = listOf(
+                Midterm(name = "Parcial 1", assignments = 8.2, activities = 8.4, project = 8.5, exam = 10.0),
+                Midterm(name = "Parcial 2", assignments = 9.8, activities = 9.6, project = 9.4, exam = 8.5),
+                Midterm(name = "Parcial 3", assignments = 9.9, activities = 9.5, project = 9.1, exam = 10.0)
+            )
+        ),
+        StudentSubject(
+            id = 8,
+            subject = subjects[7],
+            midterms = listOf(
+                Midterm(name = "Parcial 1", assignments = 8.5, activities = 9.9, project = 8.3, exam = 9.9),
+                Midterm(name = "Parcial 2", assignments = 8.1, activities = 9.2, project = 9.0, exam = 8.5),
+                Midterm(name = "Parcial 3", assignments = 10.0, activities = 10.0, project = 9.3, exam = 10.0)
+            )
+        )
     ),
+
     payments = listOf(
         Payment(1, period = "Enero", dueDate = "15-01-2024", status = PaymentStatus.PAID),
         Payment(2, period = "Febrero", dueDate = "15-02-2024", status = PaymentStatus.PAID),

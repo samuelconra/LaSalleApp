@@ -30,3 +30,6 @@ val GreenState = Color(0xFF007e13)
 val YellowState = Color(0xFFd1a700)
 
 val LightBlack = Color(0x60000000)
+
+val GrayContainer2 = Color(0xFFDADADA)
+val GrayContainer3 = Color(0xFFCFCFCF)
